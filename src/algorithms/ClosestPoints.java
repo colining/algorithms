@@ -1,4 +1,6 @@
-package com.company;
+package algorithms;
+
+import model.Point;
 
 /**
  * Created by asus on 2016/11/24.
@@ -6,7 +8,7 @@ package com.company;
 public class ClosestPoints {
     public ClosestPoints() {
     }
-    public  double ClosestPoints(Point points[]  ,int n)            //蛮力法
+    public  double ClosestPoints(Point points[]  , int n)            //蛮力法
     {
         int index1=0, index2=0;
         double d,minDist = 1000;
@@ -26,7 +28,7 @@ public class ClosestPoints {
         return minDist;
     }
 
-    public  double ClosestPoints(Point points[] , int low, int high)
+    public  double ClosestPoints(Point points[] , int low, int high)    //分治
     {
         double d1, d2,d3,d;
         int mid , i , j ,index;
